@@ -8,7 +8,7 @@ import { BlogCar } from '../models/blogcar';
   styleUrls: ['./blog-cars.component.css']
 })
 export class BlogCarsComponent implements OnInit {
-  blogCars$: Observable<BlogCar[]>;
+  blogCars$!: Observable<BlogCar[]>;
 
   constructor(private blogCarService: BlogCarService) {
   }
@@ -18,12 +18,12 @@ export class BlogCarsComponent implements OnInit {
   }
 
   loadBlogCars() {
-    this.blogCars$ = this.blogCarService.getBlogCars();
+    this.blogCars$! = this.blogCarService.getBlogCars();
   }
 
-  delete(carId:any) {
+  delete(carId:number) {
     const ans = confirm('Do you want to delete blog car with id: ' + carId);
-    if(ans){
+    if(ans) {
       this.blogCarService.deleteBlogCar(carId).subscribe((data) => {
         this.loadBlogCars();
       });
