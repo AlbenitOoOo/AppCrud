@@ -1,7 +1,7 @@
-export class BlogCar {
+export interface BlogCar {
   carId?: number;
-  creator?: string;
-  title?: string;
-  body?: string;
-  dt?: Date;
+  creator: string;
+  title: string;
+  body: string;
+  dt: Date;
 }

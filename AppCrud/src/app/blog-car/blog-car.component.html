@@ -1,1 +1,11 @@
-<p>blog-car works!</p>
+<ng-container *ngIf="(blogCar$ | async) as blogCar; else loading">
+
+    <h1>{{ blogCar.title }}</h1>
+    <div>{{ blogCar.body }}</div>
+    <ul>
+      <li>{{ blogCar.creator }}</li>
+      <li>{{ blogCar.dt }}</li>
+    </ul>
+  
+  </ng-container>
+  <ng-template #loading>Loading…</ng-template>
