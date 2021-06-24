@@ -76,7 +76,7 @@ export class BlogCarAddEditComponent implements OnInit {
         title: this.form.get(this.formTitle).value,
         body: this.form.get(this.formBody).value
       };
-      this.blogCarService.updateBlogCar(blogCar.carId!, blogCar)
+      this.blogCarService.updateBlogCar(blogCar.carId, blogCar)
         .subscribe((data) => {
           this.router.navigate([this.router.url]);
         });
