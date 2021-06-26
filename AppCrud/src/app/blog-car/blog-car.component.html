@@ -1,11 +1,11 @@
 <body>
-<ng-container *ngIf="(blogCar$ | async) as blogCar; else loading">
+<ng-container  *ngIf="(blogCar$ | async) as blogCar; else loading">
  
-    <h1>{{ blogCar.title }}</h1>
-    <div>{{ blogCar.body }}</div>
+    <h1>Car : {{ blogCar.title }}</h1>
+    <div><strong>Description :  </strong>{{ blogCar.body }}</div>
     <ul>
-      <li>{{ blogCar.creator }}</li>
-      <li>{{ blogCar.dt }}</li>
+      <li> {{ blogCar.creator }}</li>
+      <li>Date added : {{ blogCar.dt }}</li>
     </ul>
   
   </ng-container>
@@ -14,3 +14,12 @@
 
 </body>
 
+<style>
+element.style {
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+    color: black;
+    background-color: white;
+}
+</style>
