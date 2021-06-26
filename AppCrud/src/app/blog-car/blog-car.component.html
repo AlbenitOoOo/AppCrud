@@ -1,11 +1,17 @@
+<div class="text-center ">
+<img  src="assets/fiolet.png" alt="Girl in a jacket" >
+<img  src="assets/unnamed.png" alt="Girl in a jacket" >
+
+</div>
 <body>
+  
 <ng-container  *ngIf="(blogCar$ | async) as blogCar; else loading">
  
-    <h1>Car : {{ blogCar.title }}</h1>
-    <div><strong>Description :  </strong>{{ blogCar.body }}</div>
-    <ul>
-      <li> {{ blogCar.creator }}</li>
-      <li>Date added : {{ blogCar.dt }}</li>
+    <h1 class="display-1" class="list-group-item">Car : {{ blogCar.title }}</h1>
+    <div class="list-group-item"><strong>Description :  </strong>{{ blogCar.body }}</div>
+    <ul class="list-group" style="background-color: white;">
+      <li class="list-group-item"><strong>Authot :</strong> {{ blogCar.creator }}</li>
+      <li class="list-group-item"><strong>Date added :</strong> {{ blogCar.dt }}</li>
     </ul>
   
   </ng-container>
@@ -14,12 +20,22 @@
 
 </body>
 
+<div class="text-center ">
+  <img  src="assets/zielony.png" alt="Girl in a jacket" >
+  <img  src="assets/zloty.png" alt="Girl in a jacket" >
+  
+  </div>
+
+
+
 <style>
 element.style {
 }
 *, ::after, ::before {
     box-sizing: border-box;
     color: black;
-    background-color: white;
+    
 }
 </style>
+
+
